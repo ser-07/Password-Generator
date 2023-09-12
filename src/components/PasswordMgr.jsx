@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { generatePassword } from "../util/generatePass";
+import { FaCopy } from "react-icons/fa6";
 
 const PasswordMgr = () => {
   const [upperChecked, setUpperChecked] = useState(true);
@@ -8,13 +9,6 @@ const PasswordMgr = () => {
   const [symbolsChecked, setSymbolsChecked] = useState(true);
   const [len, setLen] = useState(8);
   const [pass, setPass] = useState("");
-
-  // const checkedArr = {
-  //   upper: upperChecked,
-  //   lower: lowerChecked,
-  //   nums: numsChecked,
-  //   symbols: symbolsChecked,
-  // }];
 
   const checkedArr = [upperChecked, lowerChecked, numsChecked, symbolsChecked];
 
@@ -26,13 +20,17 @@ const PasswordMgr = () => {
     <div className="d-main">
       <h1>Password Generator</h1>
       <div className="pmgr-top">
-        <h2>{pass}</h2>
+        <div className="pmgr-top-div">
+          <h2>{pass}</h2>
+        </div>
+
         <button
+          className="copy-btn"
           onClick={() => {
             navigator.clipboard.writeText(pass);
           }}
         >
-          Copy
+          <FaCopy className="copy-icon" />
         </button>
       </div>
       <div className="pmgr-bdy">
@@ -100,7 +98,9 @@ const PasswordMgr = () => {
           <p>Medium</p>
         </div>
         <div className="generate-btn-dv">
-          <button onClick={() => getPass(len, checkedArr)}>GENERATE!</button>
+          <button className="gen-btn" onClick={() => getPass(len, checkedArr)}>
+            GENERATE
+          </button>
         </div>
       </div>
     </div>

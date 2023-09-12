@@ -3,6 +3,10 @@ body{
     background-color: black;
 }
 
+h1, h2, label, p{
+    color: white
+}
+
 .continer-main{
     display: flex;
     justify-content: center;
@@ -13,13 +17,15 @@ body{
 
 .d-main{
     background-color: rgb(43, 52, 52);
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 30%;
     /* display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center; */
     padding: 10px;
+    background-color: black;
+
 
 }
 
@@ -32,16 +38,35 @@ h1{
 h2{
     width:100%;
     color: white;
-    word-wrap: break-word
+    word-wrap: break-word;
+    /* background-color: grey; */
+    /* border: 2px solid blue;  */
+
+    /* height: 50%; */
 }
 
 .pmgr-top{
     display:flex;
-    width: 100%;
+    width: auto;
     /* border: 2px solid green;  */
     justify-content: space-between;
+    background-color: rgb(88, 87, 87);
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
+.copy-btn{
+    height: 50px;
+}
+
+.pmgr-bdy{
+    background-color: rgb(88, 87, 87);
+    padding: 10px;
+
+
+}
 
 .pmgr-bdy-top{
 display:flex;
@@ -61,8 +86,21 @@ width: 100%;
 input[type=range] {
         /* border: 1px solid blue; */
         width: 100%;
-
+        accent-color: palegreen;
+    /* accent-color prop is not supported in edge */
 }
+
+input[type=range]:active {
+    /* border: 1px solid blue; */
+    /* width: 100%; */
+    accent-color: palegreen; 
+    /* accent-color prop is not supported in edge */
+}
+
+input[type=checkbox]{
+    color: palegreen;
+}
+
 
 .pmgr-bdy-mid-2{
    display: flex;
@@ -72,4 +110,10 @@ input[type=range] {
 .generate-btn-dv{
     display: flex;
     justify-content: center;
+}
+
+.gen-btn{
+    width: 100%;
+    height: 40px;
+    background-color: palegreen;
 }
